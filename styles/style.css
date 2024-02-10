@@ -65,12 +65,13 @@ ol {
 
 .result__video-container {
   position: relative;
-  max-height: 386px;
+  height: 386px;
+  width: 711px;
 }
 
 .result__video {
-  width: 100%;
-  max-height: 386px;
+  width: inherit;
+  height: inherit;
   object-fit: cover;
   object-position: center;
 }
@@ -85,6 +86,7 @@ ol {
   border: none;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
 }
 
 .search-form__fieldset-title {
@@ -99,6 +101,7 @@ ol {
   width: fit-content;
   display: flex;
   gap: 5px;
+  align-items: center
 }
 
 .search-form__pseudo-checkbox {
@@ -146,7 +149,8 @@ ol {
 }
 
 .search-form__label:focus {
-  border: 1px solid #fff;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
 }
 
 fieldset {
@@ -163,7 +167,6 @@ fieldset {
   border-bottom: 1px solid currentColor;
   font-size: 18px;
   line-height: 21px;
-  margin-top: 7px;
 }
 
 .button {
@@ -205,8 +208,7 @@ fieldset {
 }
 
 .content__details {
-  max-width: 100%;
-  max-height: 100%;
+  min-width: 399px;
   display: flex;
   flex-direction: column;
   gap: 25px;
@@ -235,6 +237,8 @@ fieldset {
 .content__card-link {
   color: #fff;
   text-decoration: none;
+  margin: 2px;
+  display: block;
 }
 
 .content__card-link_current {
@@ -295,4 +299,13 @@ fieldset {
   height: 103px;
   object-fit: cover;
   object-position: 50% 50%;
+}
+
+.error {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #545050;
 }
